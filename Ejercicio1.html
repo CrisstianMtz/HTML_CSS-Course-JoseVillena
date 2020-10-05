@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Curso de HTML en Udemy</title>
+  </head>
+  <body>
+    <header>
+      <!--Encabezado. Incluye logo, nombre principal con h1, menú de 
+            navegación, banner-->
+      <hgroup>
+        <h1>Título principal</h1>
+        <!--Es recomendable que en header solo vaya h1 para mejor posicionamiento y solo tener uno
+            para evitar diluir la importancia del título principal-->
+        <h2>Título secundario relacionado al principal</h2>
+      </hgroup>
+      <!--Indica al buscador que existe relación entre diversos títulos. Sirve para crear mas
+        mas etiquetas al momento de búsqueda pero diluye la importancia de los diversos títulos h2-->
+      <nav>
+        <ul>
+          <li>
+            <a href="https://translate.google.com.mx/?hl=es-419">
+              Misma pestaña
+            </a>
+            <!--Ingresa enlaces a una lista y abre en la misma página-->
+          </li>
+          <li>
+            <a
+              target="_blank"
+              href="https://translate.google.com.mx/?hl=es-419"
+            >
+              Otra pestaña
+            </a>
+            <!--Abre un link en otra pestaña-->
+          </li>
+          <li>
+            <a href="#desplazamiento"> Desplazamiento misma página</a>
+            <!--Desplaza a otra parte de la misma página al hacer click sobre él-->
+          </li>
+          <li>
+            <a href="Calculadora_peso/Calculadora_peso.html">
+              Otra página interna
+            </a>
+            <!--Abre otra página interna. Se escribe "Calculadora_peso/Calculadora_peso.html" para
+            abrir archivo ubicado en una carpeta dentro de otra carpeta, ejemplo.html para abrir
+            archivo en la misma carpeta y "../archivo.html" para archivos en carpetas superiores 
+            a la carpeta de este documento-->
+          </li>
+          <!--Crea elementos de una lista-->
+        </ul>
+        <!--ul Crea lista no ordenada o con viñetas, ol crea una lista ordenada o enumerada. Solo
+        se puede formar por list items li-->
+      </nav>
+      <!--Crea un menú de navegación. Solo debe haber una lista en cada menú de navegación-->
+    </header>
+    <h2>Título h2</h2>
+    <h3>Título h3</h3>
+    <h4>Título h4</h4>
+    <h5>Título h5</h5>
+    <!--La jerarquía de título h depende de la importancia del mensaje-->
+    <section>
+      <p>
+        -Ha dicho que bailaría conmigo si le llevaba unas rosas rojas -se
+        lamentaba el joven estudiante-, pero no hay en todo mi jardín una sola
+        rosa roja. Desde su nido de la encina oyole el ruiseñor. Miró por entre
+        las hojas asombrado. -¡No hay una sola rosa roja en todo mi jardín!
+        -gritaba el estudiante. Y sus bellos ojos se llenaban de lágrimas. -¡Ah,
+        de qué cosa más insignificante depende la felicidad! He leído todo
+        cuanto han escrito los sabios; poseo todos los secretos de la filosofía
+        y tengo que ver mi vida destrozada por falta de una rosa roja. -He aquí
+        por fin el verdadero enamorado -dijo el ruiseñor-. Le he cantado todas
+        las noches, aun sin conocerle; todas las noches repito su historia a las
+        estrellas, y ahora le veo. Su cabellera es oscura como la flor del
+        jacinto y sus labios rojos como la rosa que desea; pero la pasión ha
+        tornado su rostro pálido como el marfil y la pena le ha marcado en la
+        frente con su sello. -El príncipe da un baile mañana por la noche
+        -murmuraba el joven estudiante-, y mi adorada asistirá a la fiesta. Si
+        le llevo una rosa roja, bailará conmigo hasta el amanecer. Si le llevo
+        una rosa roja, la tendré en mis brazos. Reclinará su cabeza sobre mi
+        hombro y su mano estrechará la mía. Pero no hay rosas rojas en mi
+        jardín. Por lo tanto, tendré que estar solo y no me hará caso ninguno.
+        No se fiará en mí para nada y mi corazón se desgarrará. -He aquí el
+        verdadero enamorado -dijo el ruiseñor-. Sufre todo lo que yo canto: todo
+        lo que es alegría para mí, para él es pena. Realmente el amor es una
+        cosa maravillosa: es más precioso que las esmeraldas y más caro que los
+        finos ópalos. Perlas y granates no pueden pagarle porque no se halla
+        expuesto en el mercado. No puede uno comprarlo al vendedor, ni pesarlo
+        en una balanza para adquirirlo a peso de oro. -Los músicos estarán en su
+        estrado -decía el joven estudiante-. Tocarán sus instrumentos de cuerdas
+        y mi adorada bailará a los sones del arpa y del violín. Bailará tan
+        vaporosamente que su pie no tocará el suelo, y los cortesanos con sus
+        alegres atavíos la rodearán solícitos; pero conmigo no bailará porque no
+        tengo rosas rojas que darle. Y dejándose caer sobre el césped, hundía su
+        cara en sus manos y lloraba. -¿Por qué lloras? -preguntaba una lagartija
+        verde correteando cerca de él con su cola levantada. -Sí, ¿por qué?
+        -decía una mariposa que revoloteaba persiguiendo un rayo de sol. -Eso
+        es, ¿por qué? -murmuró una margarita a su vecina, con una dulce
+        vocecilla. -Llora por una rosa roja. -¿Por una rosa roja? ¡Qué
+        ridiculez! Y la lagartija, que era algo cínica, se echó a reír con todas
+        sus ganas. Pero el ruiseñor, que comprendía el secreto de la pena del
+        estudiante, permaneció silencioso en la encina, reflexionando en el
+        misterio del amor. De pronto desplegó sus alas oscuras y emprendió el
+        vuelo.
+      </p>
+    </section>
+    <section id="desplazamiento">
+      <p>
+        Aquí se <em>desplaza</em> al hacer <strong>click</strong> en
+        <span>"Desplazamiento"</span>
+      </p>
+      <!--p introduce cualquier párrafo que quiera ingresar. Sirve identificar y para separar 
+        párrafos-->
+      <!--span ayuda a separar partes del párrafo para poder agregar colores, fuentes o tamaños
+        diferentes al resto del párrafo-->
+      <!--strong da mayor peso en el buscador a cierta parte del texto-->
+      <!--em da un peso menor que strong pero el uso es el mismo-->
+    </section>
+    <!--section engloba información relacionada entre si. Es un conjunto de elementos-->
+    <!--article es una parte de la página de un elemento único. Datos sueltos que juntos hacen un
+        mismo post-->
+    <!--aside muestra información secundaria relacionada con lo principal. Sujerencias para el usuario
+    y se puede poner vertical u horizontal-->
+    <!--div agrupa información en un bloque que no puede ser integrado en section o aside. es una
+    división interna muy específica-->
+    <!--footer cierre te página con información de contacto, links internos, términos de uso, etc.-->
+    <figure>
+      <img src="img.jpg" alt="No se pudo cargar :(" title="Foto guapa" />
+      <figcaption>Texto asociado a la imagen o descripción</figcaption>
+    </figure>
+    <!--lo recomendado es modificar apariencia de imagen en CSS. Se debe abrir primero etiqueta figure
+    alt es el texto que se muestra en caso de que la imagen no cargue y title es el título de la imagen
+    al pasar el ratón sobre la imagen-->
+    <audio src="hurra.mp3" type="audio/mp3" controls="controls"></audio>
+    <video src="perros.mp4" type="video/mp4" controls="controls" poster="img.jpg"></video>
+    <!--no es recomendable subir videos de esta forma, es mejor subir a youtube e insertar el link.
+    en src igualmente se puede ingresar la URL de un video de otra página-->
+    <iframe
+      src="https://www.youtube.com/embed/FcmMF9at-js?start=9"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+    <!--para insertar video de youtube se debe ir al video, compartir, insertar y copiar-->
+    <!--poster muestra una imagen en caso de que el video no está disponible, loop inica que cuando
+    el video acabe se vuelve a repetir, autoplay reproduce el video desde el momento en que se carga
+    la página, preload carga el video para que esté listo cuando se le de play, -->
+    <!--<form action=" " method=" "></form>-->
+    <!--form es etiqueta para formularios y siempre lleva method y action-->
+  </body>
+</html>
