@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios con CSS</title>
+    <link rel="stylesheet" href="normalize.css">
+    <!--codigo para estandarizar css en todos los navegadores. Descargado de internet: normalize.css-->
+    <link rel="stylesheet" href="Ejercicio1.css">
+    <!--Crea un link entre un html y una hoja de estilos css. href indica la ruta y el archivo css. Todos
+    los html enlazados a este mismo css compartirán los estilos dichos en css-->
+    <script src="modernizr-custom.js"></script>
+    <!--codigo para estandarizar html en navegadores viejos, permitiendo que se muestre lo mismo en todos.
+         Descargado de internet: Modernizr/Development build-->
+    <style>
+        div{
+            width: 50px;
+            height: 50px;
+            margin: 20px;
+            background: red;
+        }
+        /*solo los html que tengan esta informacion tendrán este diseño ya que no está en el css compartido*/
+    </style>
+</head>
+<body>
+    <header>
+        <h2>Título secundario en cabecera</h2>
+    </header>
+    <h2>Título secundario</h2>
+    <section>
+        <div></div>
+        <div style="width: 100px; height: 100px; margin: 40px; background: purple"></div>
+        <!--Da estilo propio a un solo elemento. Por cuestiones prácticas no se debe hacer-->
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+</body>
+</html>
