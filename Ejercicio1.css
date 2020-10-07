@@ -23,13 +23,38 @@ header {
   -khtml- 	Konqueror*/
 }
 
-header h2{
+header h2, 
+h3{
     color: red;
+} /*se puede agregar un estilo a diferentes partes solo usando ,*/
+
+p{
+  color: magenta;
 }
 
-/*div{
-    width: 50px;
-    height: 50px;
-    margin: 20px;
-    background: red;
-}*/
+p#azul{
+  color: blue;
+} /*agrega propiedades a un elemento especifico con id. Se usa # para id*/
+
+.prueba{
+  color: orange;
+} /*agrega propiedades a los elementos class. Se usa . para class*/
+
+.grande{
+  font-size: 20px;
+}
+
+p + p{
+  font-weight: bolder;
+} /*añade propiedades a todos los elementos adyacentes o en este caso a todos los elementos p que 
+antes tengan un elemento p*/
+
+div > p{
+  color: green;
+} /*añade características a todos los elementos "hijo" o en este caso a todos los elementos p que 
+se encuentran dentro de un div y no dentro del article*/
+
+p ~ p{
+  font-style: oblique;
+} /*añade caracteristica a todos los elementos "hermano menor" o en este caso a todos los elementos
+p que comparten nivel con otro p y se encuentran en una jerarquia menor*/

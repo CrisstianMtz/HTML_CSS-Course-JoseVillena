@@ -1,0 +1,77 @@
+h2[title="second"]{
+    color: blue;
+}/*se le puede asignar una propiedad a un elemento empleando el atributo (solo title)
+o empleando atributo y valor exacto como en el ejemplo*/
+
+h2[lang |= "es"]{
+    color: chartreuse;
+} /*aplica a todas las etiquetas es sin importar lo que hay después, se puede ser mas 
+especifico usando es-MX o es-ES*/
+
+/*
+Colision de estilos
+
+1.- Estilos del navegador
+2.- Estilos del usuario
+3.- Estilos de archivos CSS enlazados en el orden añadido
+4.- Propiedades que se heredan
+5.- Propiedades propias del elemento
+6.- Clases asignadas en el mismo orden de asignacion
+7.- Identificador
+8.- !important
+*/
+
+body{
+    font-size: 16px;
+}
+
+p.em{
+    font-size: 2em;
+} /*em toma el valor heredado y lo multiplica por el valor de em asignado. En este caso el
+valor heredado es 16 proveniente del body y se multiplica por 2 (16px * 2em = 36px). El valor
+em se determina por el largo de la letra m en la fuente que se esté usando*/
+
+div.p.rem{
+    font-size: 1rem;
+} /*igual que em pero en este caso no se basa en el valor heredado, si no en el valor root,
+que en este caso tambien es el body*/
+
+p.ex{
+    font-size: 1ex;
+} /*Igual que em pero ex se basa en la altura de la letra X en la fuente que se esté usando*/
+
+/*Medidas relativas: Las medidas que cambian dependiendo de diferentes situaciones*/
+
+p.in{
+    font-size: 0.5in;
+}
+
+p.cm{
+    font-size: 2cm;
+}
+
+p.mm{
+    font-size: 20mm;
+}
+
+p.pt{
+    font-size: 30pt;
+} /*Se usa especialmente para impresión. 1pt = 0.35mm*/
+
+p.pc{
+    font-size: 5pc;
+} /*1pc = 12pt = 4.23mm*/
+
+/*Medidas absolutas: Las que van a medir siempre lo mismo en todas las pantallas, son fijas.*/
+
+div.fija{
+    height: 100px;
+    width: 100px;
+    background: darkcyan;
+}
+
+div.porcentual{
+    height: 100px;
+    width: 50%;
+    background: darkgoldenrod;
+} /*el porcentaje va con relación al padre, en este cas es body*/

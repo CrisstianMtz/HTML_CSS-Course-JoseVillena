@@ -1,0 +1,92 @@
+div {
+  height: 100px;
+  width: 50%;
+  border: 1px solid black;
+}
+
+.cajas {
+  height: 100px;
+  width: 100px;
+  border: 1px solid black;
+  margin: 20px;
+  padding: 10px;
+} /*padding es el borde interno y no se usa para separar objetos, margin borde externo, 
+border es la línea*/
+
+a {
+  width: 50;
+  height: 50;
+  border: 1px solid black;
+  padding: 20px; /*cambia el objeto consigo mismo*/
+}
+
+.dimension {
+  min-width: 300px;
+  max-width: 500px;
+  /*mantiene una dimensión mínima o máxima de X y funciona ligada a un porcentaje*/
+  margin: 20px 10px;
+  /*la primera aplica arriba y abajo y la segunda a los laterales. Se pueden agregar hasta 
+    cuatro márgenes comenzando desde arriba y moviéndose en sentido de las agujas del reloj (arriba, derecha,
+    izquierda, abajo. Igualmente se puede hacer por separado margin-bottom, left, right,top. Funciona igual
+    para padding y margin;*/
+}
+
+.mensaje {
+  border: 2px solid black;
+  background: orange;
+  display: inline-block;
+} /*modifica la forma en que se muestra la información, existen muchas variantes*/
+
+.padre {
+  width: 250px;
+  height: 250px;
+  margin: 25px;
+  background: orange;
+  position: relative;
+  /*este relative ayuda a dar una posición a .padre, así hijo3 lo toma como referencia
+  para top, de caso contrario tomaría a body de referencia ya que .padre no tendría
+  posición definida*/
+}
+
+/*.padre > div{
+    display: inline-block;
+    vertical-align: top;
+}*//*Alinea en diferentes direcciones*/
+
+.hijo1 {
+  width: 50px;
+  height: 50px;
+  background: red;
+  position: relative;
+    top: 30px;
+    left: 200px;
+  /*position: static manda a las coordenadas 0,0. Relative manda a las coordenadas marcadas,
+    pueden ser negativas. */
+}
+
+.hijo2 {
+    width: 100px;
+    height: 100px;
+    background: green;
+  }
+
+.hijo3 {
+    width: 50px;
+    height: 50px;
+    background: purple;
+    position: absolute;
+    top: 0px;
+    /*hace que el elemento "no exista" en cuanto a posicionamiento con respecto a otros elementos*/
+}
+
+.hijo4 {
+    width: 50px;
+    height: 50px;
+    background: blue;
+    position: fixed;
+    top: 50px;
+    left: 500px;
+    /*mantiene un elemento siempre en la misma ubicación sin importar el desplazamiento de la
+    pantalla. Util para elaborar menús*/
+}
+ 
