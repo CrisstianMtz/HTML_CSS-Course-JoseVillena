@@ -1,0 +1,212 @@
+div.borde {
+  height: 200px;
+  width: 100px;
+  background: orange;
+  margin: 50px;
+  border: 2px solid green;
+  /*Es posible crear un borde usando todos los atributos en una linea*/
+  border-top-style: dashed;
+  border-radius: 20px;
+  border-top-left-radius: 30px 10px;
+}
+
+/* Los tres atributos fundamentales para 
+establecer el borde a un elmento son:
+
+    border-width: indica la anchura del borde
+    border-style: indica el tipo del borde 
+        (solid, dashed, double, dotted, 
+        , outset o none)
+    border-color: indica el color del borde
+
+Así mismo se puede aplicar a un borde 
+concreto con:
+    border-top-style o 
+    border-left-color, etc. 
+
+Otro tipo es:
+    border-radius: 20px;
+    border-top-left-radius: 30px 10px
+
+Se puede establecer el radio de curbatura 
+de las esquinas de forma igualada, 
+pero tambien se pueden hacer curvaturas 
+avanzadas especificando en qué esquina 
+se aplicarán y cual será el radio en 
+el eje X y en el eje Y para aplicar el radio 
+de la esquina.*/
+
+/*Sombras*/
+
+div.sombra {
+  width: 200px;
+  height: 200px;
+  background: orange;
+  margin: 50px;
+  text-align: center;
+  box-shadow: inset -10px 20px 5px red, 10px 20px 5px green;
+  /*desplazamiento derecha, desplazamiento abajo, difuminado y color. inset agrega sombra hacia adentro*/
+  border: 1px solid black;
+}
+
+p {
+  position: relative;
+  top: 70px;
+  font-size: 20px;
+  text-shadow: 0px 0px 5px blue;
+}
+
+/*La estructura de las sombras aplicadas a cajas 
+(box-shadow) o a texto (text-shadow) tiene 
+4 valores : Desplazamiento Horizontal 
+            Desplazamiento Vertical 
+            Difuminado 
+            Color
+
+Añadiendo el valor "inset" como primer valor 
+del conjunto box-shadow seguido de la 
+estructura común, establecemos la sombra de 
+forma interna en el elemento al que se la 
+queramos asignar.
+
+Para usar múltiples sombras aplicadas al mismo 
+elemento solo hay que separar cada sombra con 
+una coma (,) y respetar la estructura básica*/
+
+
+/*Fondos*/
+
+div.fondo{
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    margin: 50px;
+    background:  url(firma.gif), url("imagen.jpg");
+    /*inserta una imagen de fondo*/
+    background-repeat: no-repeat, repeat;
+    /*configura las repeticiones de la imagen*/
+    background-position: right bottom, center center;
+    /*determina desde donde comienza la imagen*/
+}
+
+
+/*Fondos con degradados*/
+
+div.degradados{
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    margin: 50px;
+    background: -webkit-linear-gradient(left,
+     blue 0%,
+     red 30%,
+     green 80%,
+     yellow 100%);
+     /*Importante indicar el codigo del navegador. Primero punto de inicio y después colores*/
+}
+
+div.radial{
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    margin: 50px;
+    background: -webkit-radial-gradient(
+    center,
+     blue 0%,
+     red 30%,
+     green 80%,
+     yellow 100%);
+     /*Importante indicar el codigo del navegador. Primero punto de inicio y después colores*/
+}
+
+
+/*Para posicionar el fondo de un elemento 
+tenemos 3 opciones: 
+    border-box (desde el borde), 
+    padding-box (desde la zona del padding) y 
+    content-box (desde la zona del contenido)*/
+
+
+/*Transformacion de imagenes*/
+
+div.rotatte{
+    width: 200px;
+    height: 200px;
+    background: orange;
+    border: 2px solid black;
+    margin: 50px;
+    transform: rotate(10deg);
+    transform-origin: top;
+    /*determina el punto de rotacion*/
+}
+
+div.sk{
+    width: 200px;
+    height: 200px;
+    background: orange;
+    border: 2px solid black;
+    margin: 50px;
+    transform: skew(20dg);
+}
+
+div.trans{
+    width: 200px;
+    height: 200px;
+    background: orange;
+    border: 2px solid black;
+    margin: 50px;
+    transform: translate(50px);
+}
+
+div.sca{
+    width: 200px;
+    height: 200px;
+    background: orange;
+    border: 2px solid black;
+    margin: 50px;
+    transform: scale(1.2);
+}
+
+
+/*transform: tipo(cantidad);
+transform: tipoX(cantidad);
+transform: tipoY(cantidad);
+transform: tipo(cantidadX, cantidadY);
+transform: tipo() tipo() tipo()...;
+
+rotate: rotar en sentido de las agujas del reloj
+skew: deformar
+translate: colocarlos en otro sitio
+scale: escala*/
+
+
+/*transiciones*/
+
+div.aux{
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+    background: red;
+    border: 2px solid black;
+    transition-property: all;
+    /*indica elementos a los que se agregará transicion*/
+    transition-duration: 4s;
+    /*indica duracion de la transicion*/
+    transition-timing-function: linear;
+    /*velocidad de transicion*/
+    /*tambien puede ser en una linea: transition: all 4s linear;*/
+    /*transition-delay: sirve para retardar la transicion*/
+    
+    /*
+    ease-in: lento y luego rapido
+    ease-out: rapido y luego lento 
+    ease-in-out: velocidad de entrada y salida diferentes y medio lineal
+    linear: velocidad constante
+
+    */
+}
+
+.aux:hover{
+    transform: rotate(90deg) scale(0.5);
+    background: green;
+}

@@ -1,0 +1,90 @@
+/*Fuente interna: se encuentra en la estructura del sitio web*/
+
+@font-face {
+  font-family: "irlandesa";
+  src: url(irlandesa.ttf);
+  /*src: local('?'),
+    url("X") format("X");
+    url("X") format("X");*/
+    /*en ocaciones el navegador no reconoce el formato, por lo que hay que cargar mas archivos backup*/
+}
+
+p.ejemplo{
+  font-family: "irlandesa", sans-serif;
+} /*Cambiar fuente. Si nos se encuentra se puede poner otra por defecto*/
+
+
+/*Fuentes externas: se usa el link de una fuente externa, para casos de derechos de autos. Se puede
+obtener de google fonts*/
+
+span{
+    font-family: 'Ubuntu', sans-serif;
+}
+
+
+/*Propiedades de las fuentes*/
+
+p.texto{
+    font-family: Arial;
+    font-weight: bolder;
+    /*grosor del trazo de la letra*/
+    font-style: italic;
+    /*inclinado o normal*/
+    text-align: justify;
+    /*alineación del texto*/
+    text-decoration: line-through;
+    /*coloca o quita estilos como subrayados*/
+    text-transform: capitalize;
+    /*convierte a mayuscula, minuscula o mixto*/
+    font-variant: small-caps;
+    /*convierte a mayuscula y mantiene el tamaño de las minusculas*/
+    text-indent: 15px;
+    /*incerta indentado*/
+    letter-spacing: 2px;
+    /*tamaño de espacio entre letras*/
+    word-spacing: 4px;
+    /*espacio entre palabras*/
+}
+
+p.texto::first-letter{
+    font-size: 30px;
+} /*aplicar cambios a primera letra*/
+
+p.texto::first-line{
+    color: grey;
+}/*aplicar cambios a primera linea del texto*/
+
+
+/*Los valores para text-transform pueden ser 
+    capitalize, uppercase o lowercase.
+
+También podemos darle a font-variant el valor 
+    small-caps
+
+text-indent: 
+letter-spacing: 
+word-spacing: 
+
+
+:first-letter
+:first-line
+
+Los valores para text-decoration pueden ser 
+    normal o none, underline, overline o line-through.
+
+Los valores para font-weight pueden ser 
+    100, 200, 300, 400, 500, 600, 700, 800, 
+    normal, lighter, bold y bolder.
+
+Las palabras reservadas tiene su equivalencia: 
+normal = 400, 
+bold = 700, 
+bolder = 900 y 
+lighter = 100
+
+Los valores para font-style pueden ser 
+    normal, italic u oblique.
+Los valores para text-align pueden ser 
+    left, right, center o justify.
+line-height: 
+*/

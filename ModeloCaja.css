@@ -46,6 +46,8 @@ a {
   /*este relative ayuda a dar una posición a .padre, así hijo3 lo toma como referencia
   para top, de caso contrario tomaría a body de referencia ya que .padre no tendría
   posición definida*/
+  /*overflow: hidden;*/
+  /*hace que se oculte todo lo que sale del elemento*/
 }
 
 /*.padre > div{
@@ -68,6 +70,9 @@ a {
     width: 100px;
     height: 100px;
     background: green;
+    float: left;
+    /*permite posicionar un objeto flotando a un lado y que el resto llene los huecos. clear
+    limpia los float*/
   }
 
 .hijo3 {
@@ -90,3 +95,22 @@ a {
     pantalla. Util para elaborar menús*/
 }
  
+.hijo5{
+  width: 10px;
+  height: 10px;
+  background: brown;
+  position: relative;
+  z-index: 99;
+  /*delimita la posición en Z (en dirección al usuario). Siempre debe ser acompañado por un
+  position*/
+  /*visibility: hidden*/
+  /*mantiene un elemento oculto pero en la misma posición y conserva la estructura del diseño*/
+}
+
+.hijo6{
+  width: 25px;
+  height: 25px;
+  background: crimson;
+  opacity: 0.5;
+  /*genera transparencia del elemento. Va de 0 a 1, donde 0 es nada y 1 es solido*/
+}

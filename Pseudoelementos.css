@@ -1,0 +1,142 @@
+/*Pseudoelementos*/
+
+p{
+    position: relative;
+}
+
+p.pseudo:before{
+    content: "pseudo_before ";
+}
+
+p.pseudo:after{
+    content: " pseudo_after";
+} /*Un elemento tiene dos pseudoelementos: before y after*/
+
+p.position::before{
+    content: "position_before";
+    position: relative;
+    top: 10px;
+    left: 120px;
+} /*los pseudoelementos se pueden posicionar pero siempre van unidos al elemento*/
+
+
+/*Pseudoclases*/
+
+a#link1{
+    color: fuchsia;
+    /*cambia el color del elemento*/
+    font-size: 1cm;
+    text-decoration: none;
+    /*quita el subrayado*/
+}
+
+a#link1:link{
+    color: palevioletred;
+} /*cambia el color del enlace por visitar*/
+
+a#link2:visited{
+    color: purple;
+    /*cambia el color del enlace visidato*/
+}
+
+
+/*Pseudoclases globales*/
+
+p.globales:hover{
+    /*hover permite crear animaciones o cambios al momento de posicionar el puntero sobre el elemento.
+    funciona para imagenes, links, titulos, etc. Solo para dispositivos que tienen cursor*/
+    color: green;
+    font-size: 1cm;
+    font-weight: bold;
+}
+
+span:active{
+    /*crea una animación o cambio al hacer clic o mantener pulsado un elemento*/
+    color: red;
+    font-size: 1cm;
+    font-weight: bold;
+}
+
+input:focus{
+    /*carga las características al tener el foco*/
+    border-radius: 5px;
+    /*modifica una caja y vuelve los lados redondos*/
+    background: indianred;
+}
+
+
+/*Pseudoclases avanzadas*/
+
+div *{
+border: 1px solid black;
+width: 80px;
+height: 50px;
+background: white;
+display: inline-block;
+}
+
+div *:nth-child(3){
+    background: orange;
+}
+
+div *:nth-child(odd){
+    font-weight: bolder;
+}
+
+div p:nth-last-of-type(1){
+    background: orchid;
+}
+
+div p:first-of-type{
+    background: green;
+}
+
+div a:only-of-type{
+    background: aqua
+}
+
+div aside:empty{
+    background: blue
+}
+
+div article:not(.clase){
+    background: red
+}
+/*
+:nth-child(N)
+Marca al seleccionado
+:nth-last-child(N)
+Igual que el anterior pero comenzando desde el final
+
+:nth-of-type(N)
+Marca el elemento del tipo marcado. Ej. P:nth-of-type(2) marca el elemento 2 del tipo p
+:nth-last-of-type()
+Igual que el anterior pero comenzando desde el final
+
+:first-of-type
+Marca el primero de ese tipo
+:last-of-type
+Marca el ultimo de ese tipo
+:only-of-type
+Elementos que son unicos en su tipo
+:empty
+Marca elementos vacios
+:not(S)
+Elementos que no sean del selector S
+
+:last-child
+Ultimo hijo
+:only-child
+Unico hijo
+:root
+Elemento raiz
+:enable
+Elementos activados
+:disable
+Elementos desactivados
+:checked
+checkbox y radiobutton que esten activados
+
+even / odd
+Pares e impares
+*/
